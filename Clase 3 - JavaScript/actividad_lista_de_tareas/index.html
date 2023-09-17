@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Lista de Tareas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+
+    <form>
+        <input id="nuevaTarea" type="text" placeholder="Ingrese una nueva tarea" oninput="validarEntrada()" required>
+        <button id="agregar" onclick="agregarTarea()" disabled>Agregar</button>
+    </form>
+
+    <ul id="listaTareas"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
