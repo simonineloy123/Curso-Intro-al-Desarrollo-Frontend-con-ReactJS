@@ -2,7 +2,6 @@
 //Funcion para agregar una nueva tarea
 function agregarTarea() {
 
-
     const  nuevaTareaInput = document.getElementById('nuevaTarea');
     const listaTareas = document.getElementById('listaTareas');
     const nuevaTareaTexto = nuevaTareaInput.value.trim();
@@ -53,4 +52,34 @@ document.addEventListener('DOMContentLoaded', function() {
          elementoAutomatico.parentNode.removeChild(elementoAutomatico);
     }
 });
+
+//Funcion para mostrar tareas completadas
+function mostrarCompletadas() {
+    const tareas = document.querySelectorAll('li');
+    tareas.forEach(tarea => {
+        if (tarea.classList.contains('completed')) {
+            tarea.style.display = 'flex';
+        } else {
+            tarea.style.display = 'none';
+        }
+    });
+}
+
+//Funcion para mostrar tareas pendientes
+function mostrarPendientes() {
+    const tareas = document.querySelectorAll('li');
+    tareas.forEach(tarea => {
+        if(!tarea.classList.contains('completed')) {
+            tarea.style.display = 'flex';
+        } else {
+            tarea.style.display = 'none';
+        }
+    }); 
+}
+
+//Agregar evento de click al boton "Mostrar Completadas"
+document.getElementById('mostrarCompletadas').addEventListener('click', mostrarCompletadas());
+
+//Agregar ebento de click al boton "Mostrar Pendientes"
+document.getElementById('mostrarPendientes').addEventListener('click', mostrarPendientes());
 

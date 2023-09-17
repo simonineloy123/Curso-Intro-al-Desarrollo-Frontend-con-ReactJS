@@ -10,12 +10,15 @@
 <body>
     <h1>Lista de Tareas</h1>
 
-    <form>
-        <input id="nuevaTarea" type="text" placeholder="Ingrese una nueva tarea" oninput="validarEntrada()" required>
-        <button id="agregar" onclick="agregarTarea()" disabled>Agregar</button>
-    </form>
+
+    <input id="nuevaTarea" type="text" placeholder="Ingrese una nueva tarea">
+    <button id="agregar" onclick="agregarTarea()">Agregar</button>
 
     <ul id="listaTareas"></ul>
+
+    <button id="mostrarCompletadas" onclick="mostrarCompletadas()">Mostrar Completadas</button>
+    <button id="mostrarPendientes" onclick="mostrarPendientes()">Mostrar Pendientes</button>
+
     <script src="script.js"></script>
 </body>
 </html>

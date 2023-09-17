@@ -54,3 +54,7 @@ button.delete {
     margin-left: auto;
     background-color: #dc3545;
 }
+
+#mostrarCompletadas {
+    margin-left: 200px;
+}
